@@ -6,8 +6,10 @@ export class AppService {
   async getHello(): Promise<string> {
     this.logger.log('Hello world from service...');
     return new Promise<string>((resolve, reject) => {
-      this.logger.log('Hello inside the promise..');
-      resolve('gethello from promise');
+      setTimeout(() => {
+        this.logger.log('Hello inside the promise..');
+        resolve('gethello from promise');
+      }, 5000);
     });
   }
 }
