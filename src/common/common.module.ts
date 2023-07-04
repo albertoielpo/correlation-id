@@ -1,7 +1,6 @@
 import { Global, MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { CorrelationIdMiddleware } from "./middleware/correlation-id.middleware";
 
-
 @Global()
 @Module({
     imports: [],
