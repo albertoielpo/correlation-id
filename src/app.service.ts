@@ -7,9 +7,10 @@ export class AppService {
         this.logger.log(`Hello world from service... ${x}`);
 
         return new Promise<string>((resolve, reject) => {
+            this.logger.log(`Hello inside microtask - promise.. ${x}`);
             setTimeout(() => {
-                this.logger.log(`Hello inside the promise.. ${x}`);
-                resolve("gethello from promise");
+                this.logger.log(`Hello inside macrotask - set timeout.. ${x}`);
+                resolve("OK!");
             }, x);
         });
     }
